@@ -8,6 +8,7 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.vendor.qti.va_aosp.support=1
 
 # Radio
+persist.vendor.vonr_setting_support=1
 ril.subscription.types=NV,RUIM
 
 # Sensors
