@@ -135,7 +135,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
     
-    Dolby
+# Dolby
 PRODUCT_PACKAGES += \
     XiaomiDolby
 
