@@ -117,6 +117,10 @@ persist.vendor.dpm.vndr.idletimer.mode=default
 # DRM
 drm.service.enabled=true
 
+# Dolby Atmos
+vendor.audio.dolby.ds2.enabled=false
+vendor.audio.dolby.ds2.hardbypass=false
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
