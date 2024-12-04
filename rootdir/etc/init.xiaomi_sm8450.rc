@@ -148,3 +148,7 @@ service vendor.sensors-hal-multihal /vendor/bin/hw/android.hardware.sensors-serv
 
 on property:ro.boot.hwversion=*
     setprop ro.boot.hardware.revision ${ro.boot.hwc}_${ro.boot.hwlevel}_${ro.boot.hwversion}
+
+# Touch
+on boot
+    chown system system /sys/devices/virtual/touch/touch_dev/bump_sample_rate

@@ -1,1 +1,3 @@
 allow system_app sysfs_thermal:file write;
+
+allow system_app sysfs_htsr:file write;
