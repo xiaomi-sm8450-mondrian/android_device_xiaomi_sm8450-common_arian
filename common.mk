@@ -495,3 +495,6 @@ PRODUCT_PACKAGES += \
 
 # JamesDSP
 $(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
+
+# ViPER4AndroidFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
