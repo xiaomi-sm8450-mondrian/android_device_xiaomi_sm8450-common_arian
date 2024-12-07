@@ -492,3 +492,6 @@ PRODUCT_PACKAGES += \
     firmware_qca6490_wlan_mac.bin_symlink \
     firmware_qca6750_WCNSS_qcom_cfg.ini_symlink \
     firmware_qca6750_wlan_mac.bin_symlink
+
+# JamesDSP
+$(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
