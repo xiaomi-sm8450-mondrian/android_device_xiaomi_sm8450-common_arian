@@ -1,3 +1,7 @@
 allow system_app sysfs_thermal:file write;
 
 allow system_app sysfs_htsr:file write;
+
+allow system_app vendor_sysfs_touch:dir r_dir_perms;
+allow system_app vendor_sysfs_touch:file rw_file_perms;
+allow system_app sysfs:file rw_file_perms;
