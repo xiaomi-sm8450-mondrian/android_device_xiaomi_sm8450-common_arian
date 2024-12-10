@@ -118,8 +118,10 @@ on boot
     setprop vendor.usb.controller a600000.dwc3
     
     # Touch
-    chmod 664 /sys/devices/platform/goodix_ts.0/goodix_ts_report_rate
     chown system system /sys/devices/platform/goodix_ts.0/goodix_ts_report_rate
+    chmod 0660 /sys/devices/platform/goodix_ts.0/goodix_ts_report_rate
+    chown system system /sys/class/touch/touch_dev/palm_sensor
+    chmod 0664 /sys/class/touch/touch_dev/palm_sensor
     
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
