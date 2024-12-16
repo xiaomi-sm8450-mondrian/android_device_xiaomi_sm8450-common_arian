@@ -49,6 +49,7 @@ BOARD_SHIPPING_API_LEVEL := 31
 
 # Audio
 PRODUCT_PACKAGES += \
+    $(LOCAL_PATH)/configs/audio/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     android.hardware.audio@7.0-impl:64 \
     android.hardware.audio.effect@7.0-impl:64 \
     android.hardware.audio.service \
