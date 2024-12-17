@@ -225,6 +225,11 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 TARGET_SENSOR_NOTIFIER_EXT ?= libsensor-notifier-ext
 $(call soong_config_set, xiaomiSm8450SensorVars, extensionLibs, $(TARGET_SENSOR_NOTIFIER_EXT))
 
+# Touch
+SOONG_CONFIG_NAMESPACES += XIAOMI_TOUCH
+SOONG_CONFIG_XIAOMI_TOUCH := HIGH_TOUCH_POLLING_PATH
+SOONG_CONFIG_XIAOMI_TOUCH_HIGH_TOUCH_POLLING_PATH := /sys/devices/platform/goodix_ts.0/goodix_ts_report_rate
+
 # VINTF
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
