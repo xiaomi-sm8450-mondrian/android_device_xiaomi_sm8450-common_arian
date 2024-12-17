@@ -1,1 +1,4 @@
 allow hal_lineage_touch_default sysfs_htsr:file { write open };
+allow hal_lineage_touch_default sysfs:dir search;
+allow hal_lineage_touch_default sysfs:file rw_file_perms;
+allow hal_lineage_touch_default sysfs:lnk_file read;
