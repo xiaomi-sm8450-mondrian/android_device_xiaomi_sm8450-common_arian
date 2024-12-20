@@ -114,6 +114,8 @@ on post-fs-data
 on property:sys.boot_completed=1
     # Set thermal mode to mgame
     write /sys/devices/virtual/thermal/thermal_message/sconfig 20
+    # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
 
 on property:persist.sys.xtra-daemon.enabled=*
     restart loc_launcher
