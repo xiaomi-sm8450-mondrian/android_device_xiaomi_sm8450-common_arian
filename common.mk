@@ -49,7 +49,6 @@ BOARD_SHIPPING_API_LEVEL := 31
 
 # Audio
 PRODUCT_PACKAGES += \
-    $(LOCAL_PATH)/configs/audio/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     android.hardware.audio@7.0-impl:64 \
     android.hardware.audio.effect@7.0-impl:64 \
     android.hardware.audio.service \
@@ -135,10 +134,18 @@ PRODUCT_COPY_FILES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
-    
+
 # Dolby
 PRODUCT_PACKAGES += \
     XiaomiDolby
+
+# Dolby Config
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/dolby/,$(TARGET_COPY_OUT_VENDOR)/etc/dolby)
+
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -496,3 +503,6 @@ PRODUCT_PACKAGES += \
 
 # JamesDSP
 $(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
+
+# ViPER4AndroidFX
+#$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
