@@ -117,6 +117,9 @@ on boot
     chmod 440 /proc/net/unix
     #USB controller configuration
     setprop vendor.usb.controller a600000.dwc3
+    # Touch
+    chmod 664 /sys/devices/platform/goodix_ts.0/switch_report_rate
+    chown system system /sys/devices/platform/goodix_ts.0/switch_report_rate
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
