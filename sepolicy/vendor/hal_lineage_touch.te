@@ -1,0 +1,2 @@
+allow hal_lineage_touch_default sysfs_htsr:file { write open };
+allow hal_lineage_touch_default sysfs_htsr:dir { open getattr read search };

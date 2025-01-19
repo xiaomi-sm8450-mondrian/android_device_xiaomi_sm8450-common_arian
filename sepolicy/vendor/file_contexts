@@ -89,3 +89,7 @@
 
 # Touchscreen
 /dev/xiaomi-touch u:object_r:touchfeature_device:s0
+
+# Touch
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.xiaomi u:object_r:hal_lineage_touch_default_exec:s0
+/sys/devices/platform/goodix_ts.0/switch_report_rate u:object_r:sysfs_htsr:s0
